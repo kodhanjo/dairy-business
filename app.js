@@ -32,3 +32,7 @@ const totalProduction ={
      }
      return{res,total}
  }
+// getting the number of days in a month.
+daysInMonth( month,year, 2021) {
+    return (new Date(year, month, 0).getDate());
+}
