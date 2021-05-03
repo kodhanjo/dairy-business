@@ -52,9 +52,14 @@ function incomeOverTime(sp=sellingPrice){
 // console.log(incomeOverTime)
 // console.log(calculateTotal)
 // monthly income report
-dedicatedIncomeOvertimeReport(){
+dedicatedIncomeOvertimeReport){
     let report = '';
-    this._months.map((element, index) => {
-        report +=`Your income for ${element}is ${}`
-    })
+    months.map((element, index) => {
+        report +=`Your income for ${element}is ${totalProd()*daysInMonths(index +1)}`
+    });
+    return report;
+}
+// here am comaring the previous price when changed
+comparingPreviousPriceChange(amount) {
+    let report ={};
 }
