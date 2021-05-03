@@ -17,9 +17,18 @@ const production = {
     },
 
 }
+// console.log(production); commented out.
 const totalProduction ={
     milkPrice = 45,
     monthS = ["Jan", "Feb", "Mar","April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ]
 };
-
-console.log(totalProduction);
+// the total milkproduction per shed
+ const standardPrice = 45;
+ function calculateTotal(){
+     let res ={};
+     for (let[key, vallues]of Object.entries(production)){
+         let calc = vallues.numberOfCows*vallues.avarageProduction;
+         res[key] =total;
+     }
+     return{res,total}
+ }
