@@ -51,3 +51,10 @@ function incomeOverTime(sp=sellingPrice){
 }
 // console.log(incomeOverTime)
 // console.log(calculateTotal)
+// monthly income report
+dedicatedIncomeOvertimeReport(){
+    let report = '';
+    this._months.map((element, index) => {
+        report +=`Your income for ${element}is ${}`
+    })
+}
