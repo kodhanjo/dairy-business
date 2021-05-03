@@ -36,3 +36,12 @@ const totalProduction ={
 daysInMonth( month,year, 2021) {
     return (new Date(year, month, 0).getDate());
 }
+function totalProduction(){
+    let st = '';
+    const resp =calculateTotal();
+    for ([key, vallues]of Object.entries(resp.res)){
+        st += `your production per shed ${key.charAt(5)} is ${vallue} liters per day`;
+    }
+    st += `The total production is ${resp.total}liters per day`
+}
+// console.log(totalProduction()) commented out.
