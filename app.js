@@ -18,10 +18,9 @@ const production = {
 
 }
 // console.log(production); commented out.
-const totalProduction ={
-    milkPrice = 45,
-    monthS = ["Jan", "Feb", "Mar","April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ]
-};
+const milkPrice = 45;
+const monthsS = ["Jan", "Feb", "Mar","April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ]
+;
 // the total milkproduction per shed
  const standardPrice = 45;
  function calculateTotal(){
@@ -33,7 +32,7 @@ const totalProduction ={
      return{res,total}
  }
 // getting the number of days in a month.
-daysInMonth( month,year, 2021) {
+daysInMonths(month, year, 2021){
     return (new Date(year, month, 0).getDate());
 }
 function totalProduction(){
@@ -45,3 +44,10 @@ function totalProduction(){
     st += `The total production is ${resp.total}liters per day`
 }
 // console.log(totalProduction()) commented out.
+function incomeOverTime(sp=sellingPrice){
+    let totalProd = calculatedTotal().total
+    return `your weekly income will be Ksh ${sp*totalProd*7}
+    Your yearly income will be Ksh ${sp*totalProd*365}`
+}
+// console.log(incomeOverTime)
+// console.log(calculateTotal)
